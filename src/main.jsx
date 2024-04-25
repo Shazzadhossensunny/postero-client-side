@@ -14,6 +14,9 @@ import AddCraftItem from './pages/AddCraftItem.jsx';
 import MyArtCraftList from './pages/MyArtCraftList.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AuthContextComponent from './Context/AuthContextComponent.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +54,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthContextComponent>
     <RouterProvider router={router} />
+    <ToastContainer />
+    </AuthContextComponent>
   </React.StrictMode>,
 )

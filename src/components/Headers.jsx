@@ -26,10 +26,10 @@ export default function Headers() {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <NavLink to='/'> <li className='text-lg font-semibold'><a>Home</a></li> </NavLink>
-          <NavLink to='/allArtAndCraftItems'> <li className='text-lg font-semibold'><a>All Art & Craft Items</a></li> </NavLink>
-          <NavLink to='/addCraftItem'> <li className='text-lg font-semibold'><a>Add Craft Item</a></li> </NavLink>
-          <NavLink to='/myArtAndCraftList'> <li className='text-lg font-semibold'><a>My Art & Craft List</a></li> </NavLink>
+            <NavLink to='/'> <li className='text-lg font-semibold'>Home</li> </NavLink>
+          <NavLink to='/allArtAndCraftItems'> <li className='text-lg font-semibold'>All Art & Craft Items</li> </NavLink>
+          <NavLink to='/addCraftItem'> <li className='text-lg font-semibold'>Add Craft Item</li> </NavLink>
+          <NavLink to='/myArtAndCraftList'> <li className='text-lg font-semibold'>My Art & Craft List</li> </NavLink>
           </ul>
         </div>
         <Link to='/'>
@@ -38,22 +38,22 @@ export default function Headers() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-7">
-          <NavLink to='/'> <li className='text-lg font-semibold'><a>Home</a></li> </NavLink>
-          <NavLink to='/allArtAndCraftItems'> <li className='text-lg font-semibold'><a>All Art & Craft Items</a></li> </NavLink>
-          <NavLink to='/addCraftItem'> <li className='text-lg font-semibold'><a>Add Craft Item</a></li> </NavLink>
-          <NavLink to='/myArtAndCraftList'> <li className='text-lg font-semibold'><a>My Art & Craft List</a></li> </NavLink>
+          <NavLink to='/'> <li className='text-lg font-semibold'>Home</li> </NavLink>
+          <NavLink to='/allArtAndCraftItems'> <li className='text-lg font-semibold'>All Art & Craft Items</li> </NavLink>
+          <NavLink to='/addCraftItem'> <li className='text-lg font-semibold'>Add Craft Item</li> </NavLink>
+          <NavLink to='/myArtAndCraftList'> <li className='text-lg font-semibold'>My Art & Craft List</li> </NavLink>
         </ul>
       </div>
       <div className="navbar-end space-x-3">
         <Link to='/login'>
-         <button className="md:btn btn-sm">Login</button>
+         <button className="md:btn btn-sm lr-btn">Login</button>
         </Link>
-        <Link to='register'>
-         <button className="md:btn btn-sm">Register</button>
+        <Link to='/register'>
+         <button className="md:btn btn-sm lr-btn">Register</button>
         </Link>
       </div>
     </div>
     </div>
 
-  );
+  )
 }

@@ -8,9 +8,7 @@ body {
 }
 
 a.active {
-  background-color: #ca9234;
-  color: #fff;
-  border-radius: 12px;
+  color: #ca9234;
 }
 .overlay::after {
   content: "";
@@ -20,4 +18,9 @@ a.active {
   background: rgba(0, 0, 0, 0.3);
   left: 0;
   right: 0;
+}
+.lr-btn {
+  background-color: #ca9234 !important;
+  color: #fff !important;
+  border: 0 !important;
 }
