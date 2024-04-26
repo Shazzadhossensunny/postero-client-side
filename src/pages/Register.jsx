@@ -8,7 +8,7 @@ import { AuthContext } from "../Context/AuthContextComponent";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
- const {createNewUser, user}  = useContext(AuthContext)
+ const {createNewUser, user, setReload, userUpdateProfile}  = useContext(AuthContext)
  const location = useLocation()
  const navigate = useNavigate()
 
@@ -30,8 +30,13 @@ export default function Register() {
     }
     createNewUser(email, password)
     .then(()=>{
-      toast.success("SuccessFully Register You");
-      reset()
+      userUpdateProfile(name, photo)
+      .then(()=>{
+        toast.success("SuccessFully Register You");
+        setReload(true)
+        reset()
+      })
+
     })
     .catch((error)=>{
       console.log(error.message)

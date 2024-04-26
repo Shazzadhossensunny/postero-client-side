@@ -1,6 +1,28 @@
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../assets/logo.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../Context/AuthContextComponent';
+import { toast } from 'react-toastify';
+import userImg from '../assets/user.png'
 export default function Headers() {
+  const {user, logOut, loader} = useContext(AuthContext)
+  if(loader){
+    return (
+        <div className=" h-screen flex justify-center items-center">
+            <span className="loading loading-spinner loading-lg"></span>
+        </div>
+    )
+}
+const handleLogOut = () => {
+  logOut()
+  .then(() => {
+    toast.success('Sign Out')
+
+  })
+  .catch((error)=> {
+    console.log(error.message)
+  })
+}
   return (
     <div className="container mx-auto py-4">
        <div className="navbar">
@@ -45,12 +67,50 @@ export default function Headers() {
         </ul>
       </div>
       <div className="navbar-end space-x-3">
-        <Link to='/login'>
+        {/* user profile */}
+        {user && (
+          <div className="flex items-center gap-4">
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex="0"
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img alt="Tailwind CSS Navbar component" src={user?.photoURL || userImg} />
+                </div>
+              </div>
+              <ul
+                tabIndex="0"
+                className="menu menu-sm dropdown-content mt-3 z-40 p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a>{user?.displayName || 'user name not found'}</a>
+                </li>
+                <li>
+                <Link
+            onClick={handleLogOut}
+              to="/"
+              className="md:btn btn-sm lr-btn"
+            >
+              Log Out
+            </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ) }
+
+        {/* user profile end */}
+        <div className='space-x-2'>
+            <Link to='/login'>
          <button className="md:btn btn-sm lr-btn">Login</button>
         </Link>
         <Link to='/register'>
          <button className="md:btn btn-sm lr-btn">Register</button>
         </Link>
+          </div>
+
       </div>
     </div>
     </div>
