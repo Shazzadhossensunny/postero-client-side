@@ -17,6 +17,7 @@ import Register from './pages/Register.jsx';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthContextComponent from './Context/AuthContextComponent.jsx';
+import ItemDetails from './components/ItemDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/items')
       },
       {
         path: "/allArtAndCraftItems",
@@ -47,7 +49,13 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "itemDetails/id",
+        element: <ItemDetails></ItemDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
       }
+
     ]
   },
 ]);

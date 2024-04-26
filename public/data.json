@@ -1,0 +1,112 @@
+[
+  {
+    "image": "https://i.postimg.cc/PqcSSv4Q/mountain-view.jpg",
+    "item_name": "Mountain View Canvas",
+    "subcategory_Name": "Landscape Painting",
+    "short_description": "Beautiful mountain scenery on canvas.",
+    "price": "$50",
+    "rating": 4.8,
+    "customization": "Yes",
+    "processing_time": "3-5 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/Xq6QbMtZ/pencil-sketch.jpg",
+    "item_name": "Pencil Sketch Portrait",
+    "subcategory_Name": "Portrait Drawing",
+    "short_description": "Detailed pencil sketch of a portrait.",
+    "price": "$40",
+    "rating": 4.5,
+    "customization": "Yes",
+    "processing_time": "2-4 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/Yq38JsR9/floral.jpg",
+    "item_name": "Floral Watercolor Art",
+    "subcategory_Name": "Watercolor Painting",
+    "short_description": "Vibrant floral watercolor painting.",
+    "price": "$60",
+    "rating": 4.7,
+    "customization": "Yes",
+    "processing_time": "4-6 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/9QgbfwvH/realstick.jpg",
+    "item_name": "Realistic Oil Portrait",
+    "subcategory_Name": "Oil Painting",
+    "short_description": "Realistic portrait done with oil paints.",
+    "price": "$80",
+    "rating": 4.9,
+    "customization": "Yes",
+    "processing_time": "5-7 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/Xq6QbMtZ/pencil-sketch.jpg",
+    "item_name": "Figure Charcoal Sketch",
+    "subcategory_Name": "Charcoal Sketching",
+    "short_description": "Expressive figure sketch using charcoal.",
+    "price": "$35",
+    "rating": 4.6,
+    "customization": "No",
+    "processing_time": "1-3 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/760nXsbq/comic.jpg",
+    "item_name": "Comic Strip Drawing",
+    "subcategory_Name": "Cartoon Drawing",
+    "short_description": "Humorous comic strip illustration.",
+    "price": "$25",
+    "rating": 4.4,
+    "customization": "Yes",
+    "processing_time": "2-4 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/qqrXFsCy/forest.jpg",
+    "item_name": "Forest-Based Landscape Painting",
+    "subcategory_Name": "Landscape Painting",
+    "short_description": "Scenic forest landscape painting.",
+    "price": "$55",
+    "rating": 4.7,
+    "customization": "Yes",
+    "processing_time": "3-5 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/gkNqM6cL/ink.jpg",
+    "item_name": "Ink Outline Portrait",
+    "subcategory_Name": "Portrait Drawing",
+    "short_description": "Ink outline of a person's portrait.",
+    "price": "$45",
+    "rating": 4.6,
+    "customization": "Yes",
+    "processing_time": "2-4 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/6qCb26CL/animal.jpg",
+    "item_name": "Animal Watercolor Portrait",
+    "subcategory_Name": "Watercolor Painting",
+    "short_description": "Graceful animal portrait in watercolors.",
+    "price": "$65",
+    "rating": 4.8,
+    "customization": "Yes",
+    "processing_time": "4-6 days",
+    "stockStatus": "In Stock"
+  },
+  {
+    "image": "https://i.postimg.cc/bwPcRWJw/abstrack.jpg",
+    "item_name": "Abstract Oil Painting",
+    "subcategory_Name": "Oil Painting",
+    "short_description": "Expressive abstract painting in oils.",
+    "price": "$75",
+    "rating": 4.7,
+    "customization": "Yes",
+    "processing_time": "5-7 days",
+    "stockStatus": "In Stock"
+  }
+]

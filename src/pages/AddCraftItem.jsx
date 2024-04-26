@@ -14,7 +14,6 @@ export default function AddCraftItem() {
       data1;
       data1.displayName = user.displayName
       data1.email = user.email
-      console.log(data1)
      fetch('http://localhost:5000/items',{
 
      method: "POST",
