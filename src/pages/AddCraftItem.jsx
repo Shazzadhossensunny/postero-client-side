@@ -1,4 +1,4 @@
-import { data } from "autoprefixer";
+
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Context/AuthContextComponent";
@@ -6,21 +6,22 @@ import Swal from 'sweetalert2'
 
 export default function AddCraftItem() {
   const {user} = useContext(AuthContext)
-  console.log(user)
+
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data1) => {
     const { photo, item, subcategory, description, price, rating, time} =
       data1;
-      const name = user.displayName;
-      const email = user.email;
-      const info = {data1, email, name}
+      data1.displayName = user.displayName
+      data1.email = user.email
+      console.log(data1)
      fetch('http://localhost:5000/items',{
 
      method: "POST",
       headers:{
         'content-Type': 'application/json',
       },
-      body: JSON.stringify(info)
+      body: JSON.stringify(data1)
 
      })
      .then(res => res.json())
@@ -43,6 +44,30 @@ export default function AddCraftItem() {
         className="w-full md:w-1/2 mx-auto space-y-5"
       >
         <div>
+          <p className="mb-3 font-semibold">Name</p>
+          <input
+            type="text"
+            name="displayName"
+            defaultValue={user?.displayName || ""}
+            placeholder="Name"
+            className="input input-bordered w-full"
+            {...register("displayName")}
+            readOnly
+          />
+        </div>
+        <div>
+          <p className="mb-3 font-semibold">Email</p>
+          <input
+            type="email"
+            name="email"
+            defaultValue={user?.email || ""}
+            placeholder="Email"
+            className="input input-bordered w-full"
+            {...register("email")}
+            readOnly
+          />
+        </div>
+        <div>
           <p className="mb-3 font-semibold">Image URL</p>
           <input
             type="text"
@@ -64,13 +89,15 @@ export default function AddCraftItem() {
         </div>
         <div>
           <p className="mb-3 font-semibold">Subcategory Name</p>
-          <input
-            type="text"
-            name="subcategory"
-            placeholder="Subcategory Name"
-            className="input input-bordered w-full"
-            {...register("subcategory")}
-          />
+          <select  {...register("subcategory")} className="select select-bordered w-full">
+            <option disabled selected>Subcategory Name</option>
+            <option value="Landscape Painting">Landscape Painting</option>
+            <option value="Portrait Drawing">Portrait Drawing</option>
+            <option value="Watercolor Painting">Watercolor Painting</option>
+            <option value="Oil Painting">Oil Painting</option>
+            <option value="Charcoal Sketching">Charcoal Sketching</option>
+            <option value="Cartoon Drawing">Cartoon Drawing</option>
+          </select>
         </div>
         <div>
           <p className="mb-3 font-semibold">Short Description</p>
