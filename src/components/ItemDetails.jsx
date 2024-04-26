@@ -13,7 +13,6 @@ export default function ItemDetails() {
     subcategory,
     time,
   } = items;
-  console.log(items);
   return (
     <div className="container mx-auto my-9 lg:my-24">
       <div className="space-y-5">

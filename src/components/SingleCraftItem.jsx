@@ -15,7 +15,7 @@ export default function SingleCraftItem({items}) {
     </div>
     <div className="card-actions">
         <Link to={`/itemDetails/${_id}`} className="w-full">
-          <button className="btn btn-block bg-[#ca9234] border-[#ca9234] text-white h">View Details</button>
+          <button className="btn btn-block bg-[#ca9234] border-[#ca9234] text-white">View Details</button>
         </Link>
     </div>
   </div>
