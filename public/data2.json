@@ -1,0 +1,43 @@
+[
+  {
+    "photo": "https://i.postimg.cc/63vy8ybb/lanscape.jpg",
+    "subcategory": "Landscape Painting",
+    "origins": "Mountain scenery",
+    "key_elements": "Mountains, Trees, River"
+  },
+
+  {
+    "photo": "https://i.postimg.cc/022P3zdg/portait.jpg",
+    "subcategory": "Portrait Drawing",
+    "origins": "Human portraits",
+    "key_elements": "Faces, Expressions, Details"
+  },
+
+  {
+    "photo": "https://i.postimg.cc/Prj36S51/watercolor.jpg",
+    "subcategory": "Watercolor Painting",
+    "origins": "Floral themes",
+    "key_elements": "Flowers, Leaves, Colors"
+  },
+
+  {
+    "photo": "https://i.postimg.cc/L4b4LZ4d/oilpainting.jpg",
+    "subcategory": "Oil Painting",
+    "origins": "Realistic subjects",
+    "key_elements": "Portraits, Landscapes, Still life"
+  },
+
+  {
+    "photo": "https://i.postimg.cc/0jRsX7zr/char.jpg",
+    "subcategory": "Charcoal Sketching",
+    "origins": "Figure studies",
+    "key_elements": "Human figures, Poses, Gestures"
+  },
+
+  {
+    "photo": "https://i.postimg.cc/7649B6xw/cartoomworld.jpg",
+    "subcategory": "Cartoon Drawing",
+    "origins": "Fantasy worlds",
+    "key_elements": "Magic, Creatures, Adventure"
+  }
+]
