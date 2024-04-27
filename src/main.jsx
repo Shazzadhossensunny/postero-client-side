@@ -19,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AuthContextComponent from './Context/AuthContextComponent.jsx';
 import ItemDetails from './components/ItemDetails.jsx';
 import UpdateItems from './pages/UpdateItems.jsx';
+import ArtCraftSubCategory from './pages/ArtCraftSubCategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,12 @@ const router = createBrowserRouter([
         path: "/updateItems/:id",
         element: <UpdateItems></UpdateItems>,
         loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+
+      },
+      {
+        path: "/artCraftSubCategory/:subcategory",
+        element: <ArtCraftSubCategory></ArtCraftSubCategory>,
+        loader: ({params})=> fetch(`http://localhost:5000/subitems/${params.subcategory}`)
 
       }
 

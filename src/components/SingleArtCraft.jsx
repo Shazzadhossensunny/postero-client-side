@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function SingleArtCraft({ subItem }) {
   const { _id, photo, subcategory, origins, key_elements } = subItem;
   return (
-    <Link>
+    <Link to={`/artCraftSubCategory/${subcategory}`}>
       <div className="card bg-base-100 shadow-xl">
         <figure>
           <img className="h-[278px] w-full" src={photo} alt="image" />
