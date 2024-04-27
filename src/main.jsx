@@ -18,6 +18,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthContextComponent from './Context/AuthContextComponent.jsx';
 import ItemDetails from './components/ItemDetails.jsx';
+import UpdateItems from './pages/UpdateItems.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,12 @@ const router = createBrowserRouter([
         path: "/itemDetails/:id",
         element: <ItemDetails></ItemDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+      },
+      {
+        path: "/updateItems/:id",
+        element: <UpdateItems></UpdateItems>,
+        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+
       }
 
     ]
