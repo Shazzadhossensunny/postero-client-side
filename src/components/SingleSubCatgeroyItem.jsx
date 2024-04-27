@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 
 export default function SingleSubCatgeroyItem({subCategoryItem}) {
-    console.log(subCategoryItem)
     const {_id, photo, item, subcategory, description, price, rating, time} = subCategoryItem;
   return (
     <div className="card bg-base-100 shadow-xl">

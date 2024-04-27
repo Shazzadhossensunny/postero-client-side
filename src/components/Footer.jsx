@@ -1,4 +1,6 @@
 import logo from "../assets/logo.jpg";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
@@ -9,9 +11,21 @@ export default function Footer() {
           Copyright © 2024 <span>Postero</span>. - All right reserved
         </p>
         <div className="flex text-2xl gap-5 cursor-pointer">
-        <FaFacebookF></FaFacebookF>
-        <FaTwitter></FaTwitter>
-        <FaLinkedinIn></FaLinkedinIn>
+          <FaFacebookF id="my-anchor-facebook"></FaFacebookF>
+          <Tooltip
+            anchorSelect="#my-anchor-facebook"
+            content="Facebook"
+          ></Tooltip>
+          <FaTwitter id="my-anchor-twitter"></FaTwitter>
+          <Tooltip
+            anchorSelect="#my-anchor-twitter"
+            content="Twitter"
+          ></Tooltip>
+          <FaLinkedinIn id="my-anchor-linkedin"></FaLinkedinIn>
+          <Tooltip
+            anchorSelect="#my-anchor-linkedin"
+            content="Linkedin"
+          ></Tooltip>
         </div>
       </aside>
     </footer>
