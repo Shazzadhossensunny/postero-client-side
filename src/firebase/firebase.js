@@ -6,20 +6,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-console.log(import.meta.env.POSTERO_APIKEY)
 const firebaseConfig = {
-  // apiKey: import.meta.env.POSTERO_APIKEY,
-  // authDomain: import.meta.env.POSTERO_AUTHDOMAIN,
-  // projectId: import.meta.env.POSTERO_PROJECTID,
-  // storageBucket: import.meta.env.POSTERO_STORAGEBUCKET,
-  // messagingSenderId: import.meta.env.POSTERO_MESSAGINGSENDERID,
-  // appId: import.meta.env.POSTERO_APPID,
-  apiKey: "AIzaSyD64k7EVl8zaTsVral57NZoqQqf-VR0XS4",
-  authDomain: "postero-a38f0.firebaseapp.com",
-  projectId: "postero-a38f0",
-  storageBucket: "postero-a38f0.appspot.com",
-  messagingSenderId: "731831202194",
-  appId: "1:731831202194:web:0cac19d75df7add4be114b"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
+
 
 };
 
