@@ -36,7 +36,7 @@ export default function AddCraftItem() {
      })
   };
   return (
-    <div className="container mx-auto my-12">
+    <div className="container mx-auto my-12 px-3 lg:px-0">
       <h2 className="text-4xl font-bold text-center my-8">Add Craft Item</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}

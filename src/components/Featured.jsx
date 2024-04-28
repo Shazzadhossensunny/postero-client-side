@@ -20,8 +20,8 @@ import { FaStar } from "react-icons/fa";
 export default function Featured() {
   return (
     <div className="container mx-auto my-9 lg:my-24">
-      <h2 className="text-center text-2xl font-bold mb-10">Featured In</h2>
-      <div className="flex lg:justify-between flex-wrap">
+      <h2 className="text-center text-2xl font-bold mb-6 lg:mb-10">Featured In</h2>
+      <div className="flex justify-center xl:justify-between flex-wrap">
         <img
           className="opacity-30 duration-100 transition-opacity hover:opacity-100"
           src={fImg1}
@@ -55,19 +55,19 @@ export default function Featured() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10">
         <div className="relative">
-          <img src={bg5} alt="" className="w-full"/>
-          <div className="absolute top-20 w-[200px] left-20">
+          <img src={bg5} alt="" className="w-full h-full"/>
+          <div className="absolute top-3 md:top-20 w-full md:w-[200px] left-2 md:left-10 lg:left-20">
             <h3 className="text-4xl font-bold">Art for Every Wall</h3>
             <p className="text-[#404040]">
               We are a local brand, bringing you carefully designed and unique
               art prints.
             </p>
-            <button className="py-3 px-8 rounded-full bg-white text-[#ca9234] font-semibold uppercase hover:bg-[#ca9234] hover:text-black transition-all duration-100 mt-6">
+            <button className='py-2 lg:py-3 px-4 lg:px-8 rounded-full bg-white text-[#ca9234] font-semibold uppercase hover:bg-[#ca9234] hover:text-black transition-all duration-100 mt-3 lg:mt-6'>
               Discover now
             </button>
           </div>
         </div>
-        <div className="bg-[#ffeeec] p-6 lg:p-20">
+        <div className="bg-[#ffeeec] p-6 md:p-20">
           <h3 className="text-4xl font-bold">What Clients Say</h3>
           <Swiper
             spaceBetween={30}

@@ -29,7 +29,7 @@ export default function MyArtCraftList() {
   };
 
   return (
-    <div className="container mx-auto my-9 lg:my-24">
+    <div className="container mx-auto my-9 lg:my-24 px-3 lg:px-0">
       <div className="flex justify-end mb-8">
         <details className="dropdown">
           <summary className="m-1 btn">Filter</summary>

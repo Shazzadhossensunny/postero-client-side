@@ -14,7 +14,7 @@ export default function ItemDetails() {
     time,
   } = items;
   return (
-    <div className="container mx-auto my-9 lg:my-24">
+    <div className="container mx-auto my-9 lg:my-24 px-3 lg:px-0">
       <div className="space-y-5">
         <div>
           <img src={photo} alt="" className="w-full h-full md:h-[500px]" />

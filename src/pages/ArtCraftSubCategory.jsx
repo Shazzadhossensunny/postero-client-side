@@ -15,7 +15,7 @@ export default function ArtCraftSubCategory() {
 
     },[subcategory])
   return (
-    <div className="container mx-auto my-9 lg:my-24">
+    <div className="container mx-auto my-9 lg:my-24 px-3 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {
             subCategoryItems.map((subCategoryItem) => <SingleSubCatgeroyItem key={subCategoryItem._id} subCategoryItem={subCategoryItem}></SingleSubCatgeroyItem>)

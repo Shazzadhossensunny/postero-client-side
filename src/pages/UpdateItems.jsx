@@ -30,7 +30,7 @@ export default function UpdateItems() {
         })
       }
   return (
-    <div className="container mx-auto my-9 lg:my-24">
+    <div className="container mx-auto my-9 lg:my-24 px-3 lg:px-0">
         <h2 className="text-4xl font-bold text-center my-8">Update Art & Craft Item</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-1/2 mx-auto space-y-5">
         <div>

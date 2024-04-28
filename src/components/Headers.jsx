@@ -43,11 +43,12 @@ export default function Headers() {
   };
 
   return (
+
     <div className="container mx-auto py-4">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -65,7 +66,7 @@ export default function Headers() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <NavLink to="/">
                 {" "}
@@ -93,7 +94,7 @@ export default function Headers() {
             <img src={Logo} alt="" />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden xl:flex">
           <ul className="menu menu-horizontal px-1 space-x-7">
             <NavLink to="/">
               {" "}
@@ -147,7 +148,7 @@ export default function Headers() {
           </label>
           {/* toggle  */}
           {/* user profile */}
-          {user && (
+          {user ? (
             <div className="flex items-center gap-4">
               <div className="dropdown dropdown-end" >
                 <div
@@ -181,17 +182,24 @@ export default function Headers() {
                 </ul>
               </div>
             </div>
-          )}
-
-          {/* user profile end */}
-          <div className="space-x-2">
+          )
+          :
+          (
+            <div className="md:space-x-2">
             <Link to="/login">
-              <button className="md:btn btn-sm lr-btn">Login</button>
+              <button className="md:btn rounded-md btn-sm lr-btn mr-2 lg:mr-0 mb-2 lg:mb-0">Login</button>
             </Link>
             <Link to="/register">
-              <button className="md:btn btn-sm lr-btn">Register</button>
+              <button className="md:btn rounded-md btn-sm lr-btn">Register</button>
             </Link>
           </div>
+
+          )
+
+          }
+
+          {/* user profile end */}
+
         </div>
       </div>
     </div>
