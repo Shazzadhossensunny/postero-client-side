@@ -5,24 +5,26 @@ import { AuthContext } from "../Context/AuthContextComponent";
 import { toast } from "react-toastify";
 import userImg from "../assets/user.png";
 import "react-tooltip/dist/react-tooltip.css";
-import { Tooltip } from "react-tooltip";
+
 export default function Headers() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
   const { user, logOut, loader } = useContext(AuthContext);
 
+
   const handleToggle = (e) => {
-    if(e.target.checked){
+    if (e.target.checked) {
       setTheme("dark");
+    } else {
+      setTheme("light");
     }
-    else{
-      setTheme("light")
-    }
-  }
-  useEffect(()=>{
+  };
+  useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
-  },[theme])
+  }, [theme]);
 
   if (loader) {
     return (
@@ -31,6 +33,8 @@ export default function Headers() {
       </div>
     );
   }
+
+
 
   const handleLogOut = () => {
     logOut()
@@ -43,7 +47,6 @@ export default function Headers() {
   };
 
   return (
-
     <div className="container mx-auto py-4">
       <div className="navbar">
         <div className="navbar-start">
@@ -123,9 +126,9 @@ export default function Headers() {
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
             <input
-            type="checkbox"
-            onChange={handleToggle}
-            checked={theme === "light" ? false : true}
+              type="checkbox"
+              onChange={handleToggle}
+              checked={theme === "light" ? false : true}
             />
 
             {/* sun icon */}
@@ -149,29 +152,18 @@ export default function Headers() {
           {/* toggle  */}
           {/* user profile */}
           {user ? (
-            <div className="flex items-center gap-4">
-              <div className="dropdown dropdown-end" >
-                <div
-                  tabIndex="0"
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar"
-                >
-                  <div className="w-10 rounded-full">
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src={user?.photoURL || userImg}
-                    />
-                  </div>
-                </div>
-                <ul
-                  tabIndex="0"
-                  className="menu menu-sm dropdown-content mt-3 z-40 p-2 shadow bg-base-100 rounded-box w-52"
-                >
+            <div className="action">
+              <div className="profile">
+                <img src={user?.photoURL || userImg} alt="" />
+              </div>
+
+              <div className="menu">
+                <ul>
                   <li>
                     <a>{user?.displayName || "user name not found"}</a>
                   </li>
                   <li>
-                    <Link
+                  <Link
                       onClick={handleLogOut}
                       to="/"
                       className="btn-sm lr-btn text-center block"
@@ -182,24 +174,22 @@ export default function Headers() {
                 </ul>
               </div>
             </div>
-          )
-          :
-          (
+          ) : (
             <div className="md:space-x-2">
-            <Link to="/login">
-              <button className="md:btn rounded-md btn-sm lr-btn mr-2 lg:mr-0 mb-2 lg:mb-0">Login</button>
-            </Link>
-            <Link to="/register">
-              <button className="md:btn rounded-md btn-sm lr-btn">Register</button>
-            </Link>
-          </div>
-
-          )
-
-          }
+              <Link to="/login">
+                <button className="md:btn rounded-md btn-sm lr-btn mr-2 lg:mr-0 mb-2 lg:mb-0">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="md:btn rounded-md btn-sm lr-btn">
+                  Register
+                </button>
+              </Link>
+            </div>
+          )}
 
           {/* user profile end */}
-
         </div>
       </div>
     </div>
