@@ -20,6 +20,7 @@ import AuthContextComponent from './Context/AuthContextComponent.jsx';
 import ItemDetails from './components/ItemDetails.jsx';
 import UpdateItems from './pages/UpdateItems.jsx';
 import ArtCraftSubCategory from './pages/ArtCraftSubCategory.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addCraftItem",
-        element: <AddCraftItem></AddCraftItem>
+        element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
       },
       {
         path: "/myArtAndCraftList",
-        element: <MyArtCraftList></MyArtCraftList>
+        element: <PrivateRoute><MyArtCraftList></MyArtCraftList></PrivateRoute>
       },
       {
         path: "/login",
@@ -55,12 +56,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/itemDetails/:id",
-        element: <ItemDetails></ItemDetails>,
+        element: <PrivateRoute><ItemDetails></ItemDetails></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
       },
       {
         path: "/updateItems/:id",
-        element: <UpdateItems></UpdateItems>,
+        element:<PrivateRoute><UpdateItems></UpdateItems></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
 
       },

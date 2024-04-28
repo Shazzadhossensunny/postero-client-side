@@ -4,9 +4,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { toast } from "react-toastify";
 import userImg from "../assets/user.png";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 export default function Headers() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
   const { user, logOut, loader } = useContext(AuthContext);
+
   const handleToggle = (e) => {
     if(e.target.checked){
       setTheme("dark");
@@ -146,7 +149,7 @@ export default function Headers() {
           {/* user profile */}
           {user && (
             <div className="flex items-center gap-4">
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end" >
                 <div
                   tabIndex="0"
                   role="button"
@@ -170,7 +173,7 @@ export default function Headers() {
                     <Link
                       onClick={handleLogOut}
                       to="/"
-                      className="md:btn btn-sm lr-btn"
+                      className="btn-sm lr-btn text-center block"
                     >
                       Log Out
                     </Link>
