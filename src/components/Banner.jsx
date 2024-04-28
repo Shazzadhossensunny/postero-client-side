@@ -17,7 +17,7 @@ export default function Banner() {
     <div className='absolute w-10/12 lg:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center'>
       <h1 className='text-white text-3xl lg:text-5xl font-semibold mb-4'>
       <Typewriter
-      words={['Villa', 'on', 'Grand', 'Avenue']}
+      words={['Painting', '&', 'Drawing', 'Delights']}
       loop={true}
       cursor
       cursorStyle="_"
@@ -27,10 +27,9 @@ export default function Banner() {
       >
 
       </Typewriter>
-        {/* Villa on Grand Avenue */}
         </h1>
 
-      <p className='text-white text-lg hidden md:block'>Experience refined luxury at Villa on Grand Avenue, nestled in the heart of the vibrant cityscape. Our exclusive retreat offers meticulously designed accommodations, world-class amenities, and personalized service.</p>
+      <p className='text-white text-lg hidden md:block'>Explore a world of artistic wonder with our Painting & Drawing Delights collection. From vibrant colors to intricate details, discover inspiration and unleash your creativity with every stroke of the brush and pencil.</p>
     </div>
     </SwiperSlide>
     <SwiperSlide className='relative'>
@@ -39,7 +38,7 @@ export default function Banner() {
     <div className='absolute w-10/12 lg:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center'>
       <h1 className='text-white text-3xl lg:text-5xl font-semibold mb-4'>
       <Typewriter
-      words={['Home', 'in', 'Coral', 'Gables']}
+      words={['Artistry', 'in', 'Every', 'Stroke']}
       loop={true}
       cursor
       cursorStyle="_"
@@ -49,9 +48,8 @@ export default function Banner() {
       >
 
       </Typewriter>
-        {/* Home in Coral Gables */}
         </h1>
-      <p className='text-white text-lg hidden md:block'>Discover timeless elegance in this exquisite Coral Gables home. Nestled amidst lush surroundings, this residence offers the perfect blend of sophistication and tranquility. Featuring luxurious amenities and impeccable design, it's a sanctuary of comfort and style</p>
+      <p className='text-white text-lg hidden md:block'>Experience the artistry in every stroke with our captivating collection. From bold brushstrokes to delicate lines, immerse yourself in a world of creativity and expression.</p>
     </div>
     </SwiperSlide>
     <SwiperSlide className='relative'>
@@ -60,7 +58,7 @@ export default function Banner() {
     <div className='absolute w-10/12 lg:w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center'>
       <h1 className='text-white text-3xl lg:text-5xl font-semibold mb-4'>
       <Typewriter
-      words={['Villa', 'on', 'Grand', 'Avenue']}
+      words={['Expressive', 'Creations', 'Await']}
       loop={true}
       cursor
       cursorStyle="_"
@@ -70,9 +68,8 @@ export default function Banner() {
       >
 
       </Typewriter>
-        {/* Villa on Hollywood Boulevard */}
         </h1>
-      <p className='text-white text-lg hidden md:block'>Experience luxury living in the heart of the entertainment capital. Our villa on Hollywood Boulevard offers unparalleled elegance and sophistication. With stunning views, upscale amenities, and proximity to iconic landmarks, it's the epitome of Hollywood glamour.</p>
+      <p className='text-white text-lg hidden md:block'>Unlock a realm of expressive creations with our curated selection. Each piece is a journey of imagination, waiting to be explored and cherished.</p>
     </div>
     </SwiperSlide>
   </Swiper>
