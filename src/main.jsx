@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/items')
+        loader: () => fetch('https://postero-server-side.vercel.app/items')
       },
       {
         path: "/allArtAndCraftItems",
         element: <AllArtCraftItems></AllArtCraftItems>,
-        loader: () => fetch('http://localhost:5000/items')
+        loader: () => fetch('https://postero-server-side.vercel.app/items')
       },
       {
         path: "/addCraftItem",
@@ -57,18 +57,18 @@ const router = createBrowserRouter([
       {
         path: "/itemDetails/:id",
         element: <PrivateRoute><ItemDetails></ItemDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+        loader: ({params}) => fetch(`https://postero-server-side.vercel.app/items/${params.id}`)
       },
       {
         path: "/updateItems/:id",
         element:<PrivateRoute><UpdateItems></UpdateItems></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+        loader: ({params}) => fetch(`https://postero-server-side.vercel.app/items/${params.id}`)
 
       },
       {
         path: "/artCraftSubCategory/:subcategory",
         element: <ArtCraftSubCategory></ArtCraftSubCategory>,
-        loader: ({params})=> fetch(`http://localhost:5000/subitems/${params.subcategory}`)
+        loader: ({params})=> fetch(`https://postero-server-side.vercel.app/subitems/${params.subcategory}`)
 
       }
 

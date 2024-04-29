@@ -7,14 +7,14 @@ import Swal from 'sweetalert2'
 export default function AddCraftItem() {
   const {user} = useContext(AuthContext)
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data1) => {
     const { photo, item, subcategory, description, price, rating, time} =
       data1;
       data1.displayName = user.displayName
       data1.email = user.email
-     fetch('http://localhost:5000/items',{
+     fetch('https://postero-server-side.vercel.app/items',{
 
      method: "POST",
       headers:{
@@ -31,6 +31,7 @@ export default function AddCraftItem() {
           title: "Success",
           text: "Successfully add user",
         });
+        reset()
 
       }
      })

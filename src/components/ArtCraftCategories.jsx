@@ -5,7 +5,7 @@ import SingleArtCraft from "./SingleArtCraft";
 export default function ArtCraftCategories() {
     const [subItems, setSubItems] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/subitems')
+        fetch('https://postero-server-side.vercel.app/subitems')
         .then(res => res.json())
         .then(data => {
             setSubItems(data)

@@ -10,7 +10,7 @@ export default function UpdateItems() {
       } = useForm()
       const onSubmit = (data1) => {
         const {photo, item, subcategory, description, price, rating, time} = data1
-        fetch(`http://localhost:5000/items/${items._id}`,{
+        fetch(`https://postero-server-side.vercel.app/items/${items._id}`,{
             method: "PUT",
             headers: {
                 'content-type' : 'application/json',
@@ -57,7 +57,7 @@ export default function UpdateItems() {
         </div>
         <div>
           <p className="mb-3 font-semibold">Subcategory Name</p>
-          <select  {...register("subcategory")} value={items.subcategory} className="select select-bordered w-full">
+          <select {...register("subcategory")} defaultValue={items.subcategory} className="select select-bordered w-full">
             <option disabled selected>Subcategory Name</option>
             <option value="Landscape Painting">Landscape Painting</option>
             <option value="Portrait Drawing">Portrait Drawing</option>

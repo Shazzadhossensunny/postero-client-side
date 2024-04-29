@@ -7,7 +7,7 @@ export default function ArtCraftSubCategory() {
     const {subcategory}= useParams()
     const [subCategoryItems, setSubCategoryItems] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/subcategory/${subcategory}`)
+        fetch(`https://postero-server-side.vercel.app/subcategory/${subcategory}`)
         .then(res => res.json())
         .then(data => {
             setSubCategoryItems(data)

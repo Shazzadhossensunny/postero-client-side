@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-export default function MyCart({ items, userItems, setUserItems }) {
+export default function MyCart({ items, userItems, setDisplayItems }) {
   const { _id, photo, item, price, rating, Customization, Status } = items;
 
   const handleDelete = (id) => {
@@ -15,7 +15,7 @@ export default function MyCart({ items, userItems, setUserItems }) {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/items/${id}`, {
+        fetch(`https://postero-server-side.vercel.app/items/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -26,8 +26,8 @@ export default function MyCart({ items, userItems, setUserItems }) {
                 text: "Your file has been deleted.",
                 icon: "success",
               });
-              const remaining = userItems.filter((i)=> i._id !== id)
-              setUserItems(remaining)
+              const remaining = userItems.filter((i) => i._id !== id)
+              setDisplayItems(remaining)
             }
           });
       }

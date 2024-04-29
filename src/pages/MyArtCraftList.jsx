@@ -8,7 +8,7 @@ export default function MyArtCraftList() {
   const [displayItems, setDisplayItems] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myProduct/${user?.email}`)
+    fetch(`https://postero-server-side.vercel.app/myProduct/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserItems(data);
@@ -32,7 +32,7 @@ export default function MyArtCraftList() {
     <div className="container mx-auto my-9 lg:my-24 px-3 lg:px-0">
       <div className="flex justify-end mb-8">
         <details className="dropdown">
-          <summary className="m-1 btn">Filter</summary>
+          <summary className="m-1 btn">Customization</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li onClick={()=>handleOnChange('all')}>
               <a>All</a>
@@ -52,7 +52,7 @@ export default function MyArtCraftList() {
             key={items._id}
             items={items}
             userItems={userItems}
-            setUserItems={setUserItems}
+            setDisplayItems={setDisplayItems}
           ></MyCart>
         ))}
       </div>
