@@ -23,7 +23,7 @@ export default function UpdateItems() {
                 Swal.fire({
                     icon: "success",
                     title: "Success",
-                    text: "Successfully update user",
+                    text: "Successfully update Item",
                   });
 
             }

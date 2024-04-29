@@ -29,7 +29,7 @@ export default function AddCraftItem() {
         Swal.fire({
           icon: "success",
           title: "Success",
-          text: "Successfully add user",
+          text: "Successfully add Item",
         });
         reset()
 
