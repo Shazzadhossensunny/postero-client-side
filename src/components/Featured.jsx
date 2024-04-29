@@ -90,7 +90,7 @@ export default function Featured() {
                     <FaStar></FaStar>
                     <FaStar></FaStar>
                     </div>
-                    <p>Really easy to order on website. Both prints I ordered look lovely & compliment the recently newly decorated bedroom. This is the second order & both times prints have been lovely.</p>
+                    <p>Their professionalism, attention to detail, and creativity exceeded our expectations. Communication was seamless, and the final artworks are stunning. Highly recommend!</p>
                     <div className="flex items-center gap-6">
                         <div>
                             <img src={ellipse1} alt="" />
@@ -112,7 +112,7 @@ export default function Featured() {
                     <FaStar></FaStar>
                     <FaStar></FaStar>
                     </div>
-                    <p>Really easy to order on website. Both prints I ordered look lovely & compliment the recently newly decorated bedroom. This is the second order & both times prints have been lovely.</p>
+                    <p>Their professionalism, creativity, and attention to detail truly impressed me. I highly recommend their services to anyone in need of top-quality artwork.</p>
                     <div className="flex items-center gap-6">
                         <div>
                             <img src={ellipse2} alt="" />
@@ -133,7 +133,7 @@ export default function Featured() {
                     <FaStar></FaStar>
                     <FaStar></FaStar>
                     </div>
-                    <p>Really easy to order on website. Both prints I ordered look lovely & compliment the recently newly decorated bedroom. This is the second order & both times prints have been lovely.</p>
+                    <p>Their attention to detail, communication, and ability to bring our vision to life were remarkable. I'm thrilled with the results and wouldn't hesitate to work with them again in the future.</p>
                     <div className="flex items-center gap-6">
                         <div>
                             <img src={ellipse3} alt="" />
