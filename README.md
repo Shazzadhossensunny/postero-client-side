@@ -1,28 +1,26 @@
-# Postero
+# Project Concept
+Postero is an online platform dedicated to painting, art, and craft enthusiasts. It allows users to showcase their creativity by adding, updating, and deleting their art and craft projects, fostering a vibrant community of artists.
 
-"Bringing Imagination to Life, One Stroke at a Time"?
-
-# Painting and Drawing
-
-Category name
-
-## https://postero-a38f0.web.app/
-
-Website Live Link
-
-## https://postero-server-side.vercel.app/
-
-Server Live Link
 
 ## Features
 
-- All Art & Craft Items Page add its shows all items added
-- Art & Craft Category Section Add Home Page and Each card click it shows data category wise.
-- My Art & Craft List Page add where show login user added items
-- Private Route add
-- Fully Responsive
+- User Can Add Item
+- User Can Update Item
+- User Can Delete Item
 
-## NPM Package
+## Technology
 
-- React-simple-typewriter
-- React-tooltip
+- Tailwind
+- DaisyUI
+- ReactJS
+- Firebase
+- Node JS
+- Express JS
+- MongoDB
+
+## Clone Project Run Locally
+
+- npm install
+- Set Up Environment Variables .env file for Firebase and MongoDB
+- npm run dev for client
+- nodemon start for server run
